@@ -8,7 +8,7 @@ npm install -g pnpm@latest
 pnpm self-update
 ```
 
-# OpenClaw
+# Start gateway
 
 ```shell
 git clone git@github.com:openclaw/openclaw.git --depth 1
@@ -25,7 +25,11 @@ pnpm gateway:watch
 
 # open in browser
 http://127.0.0.1:18789
+```
 
+# Stop gateway
+
+```shell
 # stop gateway service
 pnpm openclaw gateway stop
 ```
