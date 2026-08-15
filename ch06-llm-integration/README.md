@@ -757,3 +757,9 @@ LLM 集成是 OpenClaw Agent 运行时的核心基础设施。其设计的关键
 - **上下文窗口管理**：通过模型发现 + 配置覆盖 + 缓存机制，运行时能准确确定每个模型的有效上下文窗口。
 - **模型选择**：支持 Agent 级别覆盖、回退机制、别名解析和 Provider 路由。
 - **灵活扩展**：自定义 Provider 可以通过 `KnownApi` 之外的类型字符串无缝集成。
+
+---
+
+上一章（[第 5 章](ch05-tool-system/README.md)）讲解了工具的规划与协议转换，其输出正是通过本章的 LLM 类型系统传递给 Provider 的。下一章将介绍 **Gateway 与消息分发**——WebSocket 网关如何将 Agent 运行时与 CLI 客户端、渠道集成连接起来。
+
+> 🔗 术语呼应：本章的 **`StreamFn`** 对应第 4 章 Agent 循环中 `config.streamFn` 注入的流式函数；**上下文窗口** (`context.ts`) 的配置覆盖来自第 10 章的 `OpenClawConfig`；**模型选择** (`model-selection.ts`) 从第 10 章的 `AgentsConfig.defaults.model` 中读取默认模型。

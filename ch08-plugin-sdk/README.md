@@ -706,3 +706,9 @@ openclaw plugins disable my-plugin
 - **插件运行时**为每个插件提供独立的运行环境
 
 插件系统的设计体现了"约定优于配置"和"关注点分离"的原则——插件开发者只需要关注自己插件的逻辑，而插件的发现、加载、生命周期管理由框架统一处理。
+
+---
+
+上一章（[第 7 章](ch07-gateway-messaging/README.md)）讲解了 Gateway 如何作为消息中枢连接外部世界，本章讲解了插件如何通过注册机制扩展 Agent 能力。下一章将介绍 **沙箱与安全**——Agent 如何在隔离环境中执行代码和工具，确保运行时的安全性。
+
+> 🔗 术语呼应：本章的 **`registerTool`** 产生的工具描述符会进入第 5 章工具系统的 `ToolDescriptor` 列表，并被打上 `owner: "plugin"` 标记；**`registerProvider`** 产生的 Provider 实现会被第 6 章模型选择的 Provider 路由选中；**`beforeToolCall` 钩子** 对应第 3 章 `AgentOptions.beforeToolCall` 回调。

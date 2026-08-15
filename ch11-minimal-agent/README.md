@@ -671,3 +671,17 @@ class SessionStore {
 | 插件系统 | 无 | 完整 Plugin SDK、生命周期钩子 |
 
 本章的最小实现涵盖了 Agent 的核心模式，是理解 OpenClaw 完整架构的最佳起点。
+
+---
+
+🎉 **恭喜你完成了全部 11 章的学习！**
+
+**回顾学习路径**：
+- [第 1 章](ch01-introduction/README.md) 到 [第 2 章](ch02-project-skeleton/README.md)：了解 OpenClaw 是什么、项目如何组织
+- [第 3 章](ch03-agent-core/README.md) 到 [第 4 章](ch04-agent-loop/README.md)：掌握 Agent 核心抽象和核心循环（**系统的大脑**）
+- [第 5 章](ch05-tool-system/README.md) 到 [第 6 章](ch06-llm-integration/README.md)：理解工具系统和 LLM 集成（**大脑的两只手**）
+- [第 7 章](ch07-gateway-messaging/README.md) 到 [第 8 章](ch08-plugin-sdk/README.md)：掌握网关通信和插件扩展（**连接外部世界的桥梁**）
+- [第 9 章](ch09-sandbox-security/README.md) 到 [第 10 章](ch10-config-session/README.md)：理解安全防护和运行时上下文（**护栏与底座**）
+- [第 11 章](ch11-minimal-agent/README.md)：动手实现最小 Agent（**理论落地实践**）
+
+**快速速查**：如需快速回忆关键术语，参见 [附录：核心概念速查表](appendix-concepts/README.md)。

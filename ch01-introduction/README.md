@@ -57,11 +57,11 @@ OpenClaw 拥有一个基于描述符的工具规划系统（`src/tools/`）。�
 
 ### LLM 集成
 
-OpenClaw 支持多种 LLM 提供商，包括 OpenAI、Anthropic、Google、Mistral、DeepSeek、Groq、Ollama 等 100+ 个模型提供商。LLM 集成通过统一的模型目录（Model Catalog）和提供商抽象层实现，位于 `packages/ai/` 和 `packages/llm-core/` 中。
+OpenClaw 支持多种 LLM 提供商，包括 OpenAI、Anthropic、Google、Mistral、DeepSeek、Groq、Ollama 等主流模型提供商。LLM 集成通过统一的模型目录（Model Catalog）和提供商抽象层实现，核心代码位于 `packages/llm-core/`（类型系统）和 `packages/ai/`（Provider 适配器）中。
 
 ### 插件 SDK
 
-OpenClaw 提供了完整的插件 SDK（`packages/plugin-sdk/`），允许开发者创建自定义插件。插件 SDK 覆盖了：
+OpenClaw 提供了完整的插件 SDK（源码位于 `packages/plugin-sdk/`，npm 导出路径为 `./plugin-sdk`），允许开发者创建自定义插件。插件 SDK 覆盖了：
 
 - 渠道插件（Channel Plugin）：对接 Slack、Discord、Telegram 等平台
 - 提供商插件（Provider Plugin）：对接新的 LLM 提供商
@@ -82,13 +82,14 @@ OpenClaw 支持丰富的渠道集成，所有渠道都以插件形式实现，�
 | Signal | `extensions/signal/` | 端到端加密通讯 |
 | IRC | `extensions/irc/` | 经典互联网中继聊天 |
 | Matrix | `extensions/matrix/` | 去中心化通讯协议 |
-| 微信 (WeChat) | `extensions/xiaomi/` | 微信相关集成 |
-| QQ 机器人 | `extensions/qqbot/` | QQ 平台机器人 |
+| QQ 机器人 | `extensions/qqbot/` | 腾讯 QQ 平台机器人 |
 | iMessage | `extensions/imessage/` | Apple 即时通讯 |
-| Google Chat | `extensions/googlechat/` | Google 工作空间 |
+| Google Chat | `extensions/googlechat/` | Google 工作空间协作聊天 |
 | Microsoft Teams | `extensions/msteams/` | Microsoft 协作平台 |
-| SMS | `extensions/sms/` | 短信网关 |
-| 语音通话 | `extensions/voice-call/` | 语音通话集成 |
+| SMS | `extensions/sms/` | 短信网关（Twilio 等） |
+| 语音通话 | `extensions/voice-call/` | 实时语音通话集成 |
+| Tlon (Urbit) | `extensions/tlon/` | Urbit 去中心化网络 |
+| 小米生态 | `extensions/xiaomi/` | 小米智能设备相关集成 |
 
 ### 沙箱环境
 
@@ -316,13 +317,11 @@ openclaw/
 │   ├── discord/               # Discord 渠道
 │   ├── telegram/              # Telegram 渠道
 │   ├── feishu/                # 飞书渠道
-│   ├── openai/                # OpenAI 提供商
 │   ├── anthropic/             # Anthropic 提供商
-│   └── ... (100+ 扩展)
-├── ui/                        # Web UI (Vite + 框架)
+│   ├── copilot/               # GitHub Copilot 扩展
+│   └── ... (150+ 扩展)
 ├── docs/                      # 文档
-├── scripts/                   # 构建和运维脚本
-└── test/                      # 测试基础设施
+└── scripts/                   # 构建和运维脚本
 ```
 
 ### 关键目录说明
@@ -332,8 +331,7 @@ openclaw/
 | `src/` | 核心应用代码，CLI、网关、Agent、工具、插件系统等 |
 | `packages/` | 内部共享库，供 `src/` 和 `extensions/` 使用 |
 | `extensions/` | 渠道和提供商插件，每个都是一个独立包 |
-| `plugin-sdk/` | 指向 `packages/plugin-sdk/` 的公共 API |
-| `ui/` | Web 控制台界面 |
+| `./plugin-sdk` (npm export) | 插件 SDK 的公共 API 导出路径，源码位于 `packages/plugin-sdk/src/` |
 | `docs/` | 用户文档和 CLI 参考 |
 
 ## 1.5 关键技术决策

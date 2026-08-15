@@ -469,3 +469,9 @@ Gateway 是 OpenClaw 的**通信中枢**，它通过 WebSocket 协议将 CLI 客
 - **渠道集成**如何通过插件和 Gateway 连接外部 IM 平台
 
 Gateway 的设计体现了"控制平面"的理念——它不处理具体的 Agent 逻辑，而是负责连接管理、请求路由和权限控制，将 Agent 运行时与外部世界安全地连接起来。
+
+---
+
+上一章（[第 6 章](ch06-llm-integration/README.md)）讲解了 Agent 与 LLM 提供商的通信链路，本章讲解了 Agent 与外部客户端/渠道的通信链路。下一章将介绍 **插件 SDK**——如何通过注册机制扩展 Agent 的能力（Provider、渠道、工具、钩子等）。
+
+> 🔗 术语呼应：本章提到的 **渠道插件** 与第 8 章的 `registerChannel` API 对应；**插件方法** 通过第 8 章的 `register` 阶段注入到 Gateway 的方法注册表中；**BOOT.md** 的执行由 Agent 命令协调器驱动（第 4 章 `agent-command.ts`）。

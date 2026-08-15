@@ -22,17 +22,17 @@
 | 章节 | 标题 | 内容概要 | 难度 |
 |------|------|---------|------|
 | [第 1 章](ch01-introduction/README.md) | **认识 OpenClaw** | 什么是 OpenClaw、核心能力、整体架构俯瞰、项目速览 | ⭐ |
-| [第 2 章](ch02-project-skeleton/README.md) | **项目骨架与入口设计** | CLI 入口、Bootstrap 流程、模块化架构、启动流程全景 | ⭐⭐ |
-| [第 3 章](ch03-agent-core/README.md) | **Agent 核心抽象** | Agent 类设计、消息类型系统、运行时依赖、状态管理 | ⭐⭐⭐ |
-| [第 4 章](ch04-agent-loop/README.md) | **Agent 核心循环** | LLM 交互循环、工具调用执行、事件流、系统提示词构建、上下文压缩 | ⭐⭐⭐ |
-| [第 5 章](ch05-tool-system/README.md) | **工具系统** | 工具描述符、可用性规划、协议转换、工具执行编排 | ⭐⭐⭐ |
-| [第 6 章](ch06-llm-integration/README.md) | **LLM 集成** | Provider 抽象层、流式处理、Token 用量归一化、模型管理 | ⭐⭐⭐ |
-| [第 7 章](ch07-gateway-messaging/README.md) | **网关与消息分发** | WebSocket 网关、消息路由、Agent 分发、Channel 集成 | ⭐⭐⭐ |
-| [第 8 章](ch08-plugin-sdk/README.md) | **插件 SDK** | 插件注册机制、工具注册、生命周期钩子、Provider 扩展 | ⭐⭐⭐ |
-| [第 9 章](ch09-sandbox-security/README.md) | **沙箱与安全** | Sandbox 架构、Docker/SSH 后端、工具权限策略、审批流程 | ⭐⭐ |
-| [第 10 章](ch10-config-session/README.md) | **配置与会话** | 配置系统、Session 管理、模型选择、上下文窗口管理 | ⭐⭐ |
-| [第 11 章](ch11-minimal-agent/README.md) | **从零搭建你的最小 OpenClaw** | 完整可运行代码 + 扩展方向 | ⭐⭐⭐ |
-| [附录](appendix-concepts/README.md) | **核心概念速查表** | 关键概念一页速查 | ⭐ |
+| [第 2 章](ch02-project-skeleton/README.md) | **项目骨架与入口设计** | CLI 入口、Bootstrap 流程、模块化架构、启动流程全景、Runtime 抽象 | ⭐⭐ |
+| [第 3 章](ch03-agent-core/README.md) | **Agent 核心抽象** | Agent 类设计、消息类型系统、运行时依赖注入、状态管理 | ⭐⭐⭐ |
+| [第 4 章](ch04-agent-loop/README.md) | **Agent 核心循环** | LLM 交互循环、工具调用执行（顺序/并行）、事件流、消息队列、Agent 命令编排 | ⭐⭐⭐ |
+| [第 5 章](ch05-tool-system/README.md) | **工具系统** | 工具描述符、可用性评估、工具规划、协议转换、内置工具、插件工具注册 | ⭐⭐⭐ |
+| [第 6 章](ch06-llm-integration/README.md) | **LLM 集成** | Provider 类型系统、流式协议、Token 用量归一化、上下文窗口管理、模型选择与回退 | ⭐⭐⭐ |
+| [第 7 章](ch07-gateway-messaging/README.md) | **网关与消息分发** | WebSocket 网关、RPC 方法注册表、认证、Agent 调度、Channel 集成、BOOT.md | ⭐⭐⭐ |
+| [第 8 章](ch08-plugin-sdk/README.md) | **插件 SDK** | 插件类型、注册/激活生命周期、工具注册、钩子机制、Provider/Channel 扩展、示例插件 | ⭐⭐⭐ |
+| [第 9 章](ch09-sandbox-security/README.md) | **沙箱与安全** | Sandbox 架构、Docker/SSH 后端、工具权限策略、SSH 沙箱传输 | ⭐⭐ |
+| [第 10 章](ch10-config-session/README.md) | **配置与会话** | 配置品牌类型与加载、Agent 配置、Session 键与存储、超时解析、配置路径 | ⭐⭐ |
+| [第 11 章](ch11-minimal-agent/README.md) | **从零搭建你的最小 OpenClaw** | 完整可运行代码（Agent 类/循环/工具/LLM 流式）+ 4 个扩展方向 | ⭐⭐⭐ |
+| [附录](appendix-concepts/README.md) | **核心概念速查表** | 10 个关键概念一页速查（Agent、Agent Loop、StreamFn、Event Stream 等） | ⭐ |
 
 ---
 

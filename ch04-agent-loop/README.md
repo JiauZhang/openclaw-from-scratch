@@ -732,4 +732,6 @@ Agent 核心循环是整个 OpenClaw 系统的中枢神经系统。它通过精�
 | `executeToolCalls()` | 工具执行调度（顺序/并行） |
 | `EventStream` | 事件流，连接 Agent 与 UI |
 
-下一章将介绍 Agent 的 Harness 系统——如何定义和执行代码执行环境。
+下一章将介绍 **工具系统**——Agent 如何通过工具描述符、规划器和协议转换与外部世界交互。
+
+> 延伸阅读：如果你想先动手写代码，也可以直接跳转到 [第 11 章](ch11-minimal-agent/README.md) 从零搭建一个完整的最小 Agent 实现。

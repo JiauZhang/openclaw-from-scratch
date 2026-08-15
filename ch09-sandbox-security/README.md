@@ -387,3 +387,9 @@ Agent 会话启动
 3. **文件系统访问**：通过 `workspaceAccess`（`"none" | "ro" | "rw"`）控制对工作区的读写权限
 
 这种多层安全设计确保了即使 LLM 生成的工具调用有误，也不会对宿主机造成实质性损害。
+
+---
+
+上一章（[第 8 章](ch08-plugin-sdk/README.md)）讲解了如何扩展 Agent 的能力，本章讲解了如何约束 Agent 的能力以确保安全。下一章将介绍 **配置与会话**——配置系统如何驱动沙箱模式、模型默认值等行为，以及会话存储如何持久化 Agent 的运行状态。
+
+> 🔗 术语呼应：本章的 **`resolveSandboxConfigForAgent`** 从第 10 章的 `OpenClawConfig.agents.defaults.sandbox` 和 `agents.list[].sandbox` 中读取配置；**`isToolAllowed`** 的工具策略与第 5 章工具可用性评估 (`evaluateToolAvailability`) 形成双层防护。

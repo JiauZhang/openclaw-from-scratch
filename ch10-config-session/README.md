@@ -386,3 +386,9 @@ export const isBunBinary =
 ```
 
 这种分工使得配置系统关注"应该怎么做"，而会话系统关注"已经做了什么"，两者共同构成了 Agent 运行时的完整上下文。
+
+---
+
+上一章（[第 9 章](ch09-sandbox-security/README.md)）讲解了沙箱的运行时机制，沙箱配置的具体来源正是本章的 `OpenClawConfig`。下一章（[第 11 章](ch11-minimal-agent/README.md)）将带你**从零搭建一个完整可运行的最小 Agent**——将前 10 章的所有概念落地为真实代码。
+
+> 🔗 术语呼应：本章的 **`AgentsConfig.defaults.model`** 被第 6 章 `resolveDefaultModelForAgent` 读取作为默认模型；**`resolveAgentTimeoutMs`** 控制第 4 章 Agent 循环的运行时长；**`resolveSessionKey`** 生成的会话键是沙箱第 9 章 `ensureSandboxWorkspaceForSession` 的核心参数。
